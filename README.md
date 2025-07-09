@@ -8,7 +8,7 @@ When configuring `-Xlint` options from a **parent Maven project** in a multi-mod
 
 However, **IntelliJ IDEA does not behave as expected** in this scenario:
 
-- IntelliJ shows errors on all warnings, including those that are explicitly suppressed via the `-Xlint` options.
+- IntelliJ provoke build errors on all warnings, including those that are explicitly suppressed via the `-Xlint` options.
 - IntelliJ fails to suppress warnings like `-deprecation` and `-processing` which are configured to be ignored.
 - This discrepancy causes confusion and false-positive error reporting inside the IDE, although Maven builds succeed.
 
