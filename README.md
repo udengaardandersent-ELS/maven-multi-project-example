@@ -56,7 +56,7 @@ public class Module1 implements Supplier<String> {
 
 	/**
 	 * Build in intellij IDEA will fail on this warning.
-	 * However, this is a deprecation that should be suppressed given the options set in the ReactorCore module.
+	 * However, this is a warning that should be suppressed given the options set in the ReactorCore module.
 	 */
 	public void triggerCompileError() {
 		new Date(0, Calendar.NOVEMBER, 10);
