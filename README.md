@@ -40,3 +40,26 @@ The problematic configuration is typically defined in the parent `pom.xml` like 
         </compilerArgs>
     </configuration>
 </plugin>
+```
+
+### Compile error
+This class used a deprecated feature. This warning provokes build error in IDEA.
+```java
+public class Module1 implements Supplier<String> {
+
+	protected static final String MODULE_NAME = "module1";
+
+	@Override
+	public String get() {
+		return MODULE_NAME;
+	}
+
+	/**
+	 * Build in intellij IDEA will fail on this warning.
+	 * However, this is a deprecation that should be suppressed given the options set in the ReactorCore module.
+	 */
+	public void triggerCompileError() {
+		new Date(0, Calendar.NOVEMBER, 10);
+	}
+}
+```
