@@ -54,7 +54,7 @@ public class Module1Test {
     
     @Test
     public void testReactorMethod(){
-        Assert.assertEquals(Module1.MODULE_NAME,  this.module.reactorMethod());
+        Assert.assertEquals(Module1.MODULE_NAME,  this.module.get());
     }
         
 }

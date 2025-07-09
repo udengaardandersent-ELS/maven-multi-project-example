@@ -24,17 +24,18 @@
 
 package de.mes;
 
+import java.util.function.Supplier;
+
 /**
  *
  * @author esche
  */
-public class Module2 implements ReactorModule {
+public class Module2 implements Supplier<String> {
 
     protected static final String MODULE_NAME = "module2";
 
     @Override
-    public String reactorMethod() {
+    public String get() {
         return MODULE_NAME;
     }
-    
 }
