@@ -1,5 +1,6 @@
 package de.mes;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.function.Supplier;
 
@@ -17,6 +18,6 @@ public class Module1 implements Supplier<String> {
      * However, this is a deprecation that should be suppressed given the options set in the ReactorCore module.
      */
     public void triggerCompileError() {
-        new Date(0, 10, 10);
+        new Date(0, Calendar.NOVEMBER, 10);
     }
 }
